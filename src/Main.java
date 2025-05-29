@@ -1,15 +1,46 @@
+import java.util.Scanner;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
+    public static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        System.out.printf("Hello and welcome!\n");
+        menu();
+
+    }
+
+    public static void menu(){
+        int chon;
+
+        do{
+            System.out.println("tính chu vi & diện tch hình chữ nhật ");
+            System.out.println("Cộng trừ nhân chia ");
+            System.out.println("tính lãi xuất ngân hàng ");
+            System.out.println("chẵn lẽ");
+            System.out.println("-------------------------");
+            System.out.print("Nhập lựa chọn: ");
+            chon = scanner.nextInt();
+
+            switch(chon){
+                case 1:
+                    System.out.println("tính chu vi & diện tch hình chữ nhật ");
+
+                    break;
+                case 2:
+                    System.out.println("Cộng trừ nhân chia ");
+                    break;
+                case 3:
+                    System.out.println("tính lãi xuất ngân hàng ");
+                    break;
+                case 4:
+                    System.out.println("chẵn lẽ");
+                    break;
+                default:
+                    System.out.println("nhập lại i cốt");
+                    break;
+            }
+        }while(chon!=5);
     }
 }
